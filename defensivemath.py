@@ -31,7 +31,7 @@ import math
 
 # define some functions
 
-def get_circle_area(radius):
+def get_area_of_lot(radius):
     """
     Return area of a circle given the radius.
 
@@ -69,7 +69,7 @@ def print_circle_areas(lst):
     for r in lst:
 
         try:
-            area = get_circle_area(r)
+            area = get_area_of_lot(r)
             print(f"r = {r}, area={area}")
 
         except Exception as ex:
@@ -98,12 +98,12 @@ if __name__ == "__main__":
     print(f"math.degrees(2 * math.pi) = {math.degrees(2 * math.pi)}")
     print(f"math.radians(180)         = {math.radians(180)}")
     print()
-    print("Call get_circle_area() function with a different values, 5")
+    print("Call get_area_of_lot() function with a different values, 5")
     print()
-    print(f"get_circle_area(5) = {get_circle_area(5)}")
-    print(f"get_circle_area(-16) = {get_circle_area(-16)}")
-    print(f"get_circle_area(math.inf) = {get_circle_area(math.inf)}")
-    print(f"get_circle_area('five') = {get_circle_area('five')}")
+    print(f"get_area_of_lot(5) = {get_area_of_lot(5)}")
+    print(f"get_area_of_lot(-16) = {get_area_of_lot(-16)}")
+    print(f"get_area_of_lot(math.inf) = {get_area_of_lot(math.inf)}")
+    print(f"get_area_of_lot('five') = {get_area_of_lot('five')}")
     print()   
     print("Call print_circle_areas() function with a list of values")
     print()

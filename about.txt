@@ -1,0 +1,44 @@
+
+
+==============================================================
+==============================================================
+
+ Welcome!
+
+ It's 2023-01-18 at 07:28 PM
+
+ This file is running on:    nt Windows 10
+ 
+ The Python version is:      3.11.1
+ 
+ The Python interpreter is at: 
+ C:\Users\jorda\AppData\Local\Programs\Python\Python311\python.exe
+
+ The active environment should be either conda OR pip (one should be None):
+
+     Active conda env is: None
+     Active pip env is:   None
+ 
+ The path to the active virtual environment is:
+
+ C:\Users\jorda\AppData\Local\Programs\Python\Python311
+ 
+ The Current Working Directory (CWD) where this command was launched is:
+
+ C:\Users\jorda\OneDrive\Desktop\Northwest Homework\DATA ANALYTICS FUNDAMENTALS\datafun-02-functions\datafun-02-functions
+ 
+ The absolute path to the data directory is:
+
+ C:\Users\jorda\OneDrive\Desktop\Northwest Homework\DATA ANALYTICS FUNDAMENTALS\datafun-02-functions\datafun-02-functions\
+ 
+ The absolute path to this source directory is:
+
+ c:\Users\jorda\OneDrive\Desktop\Northwest Homework\DATA ANALYTICS FUNDAMENTALS\datafun-02-functions\datafun-02-functions
+ 
+ The absolute path to this file is:
+
+ c:\Users\jorda\OneDrive\Desktop\Northwest Homework\DATA ANALYTICS FUNDAMENTALS\datafun-02-functions\datafun-02-functions\about.py
+ 
+==============================================================
+==============================================================
+
