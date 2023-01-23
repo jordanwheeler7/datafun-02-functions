@@ -1,4 +1,5 @@
 """
+Jordan Wheeler, 21 Jan 2023
 
 This example illustrates basic analytics
 using just the built-in statistics module.
@@ -18,9 +19,10 @@ Uses only Python Standard Library module:
 
 import statistics
 
+
 # define a variable with some univariant data 
 # (one varabile, many readings)
-scores = [
+weight = [
     105,
     129,
     87,
@@ -76,5 +78,95 @@ scores = [
 # univariant time series data (one varabile over time)
 # typically, x (or time) is independent and
 # y is dependent on x (e.g. temperature vs hour of day)
-x_times = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-y_temps = [2, 5, 8, 20, 21, 23, 24, 27, 30, 31, 31,32]
+xreps = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+ypounds = [405, 385, 365, 315, 295, 275, 225, 225, 205, 185, 185, 135]
+
+#print error if both lists are not the same size
+if len(xreps) != len(ypounds):
+    print("ERROR: The two lists are not the same size.")
+    print(f"    {len(xreps)}!={ypounds}")
+    quit()
+try:
+    xx_coor = statistics.correlation(xreps, xreps)
+    xy_coor = statistics.correlation(xreps, ypounds)
+    
+except Exception as e:
+    print(f"ERROR:  {e}")
+    print("Try updating to Python 3.10 or greater.")
+    print("Or select your updated conda environment in VS Code.")
+    print("VS Code Menu / View / Command Palette / Python: Select Interpretor")
+    quit()
+    
+    
+    
+#central tendency
+
+mean = statistics.mean(weight)
+median = statistics.median(weight)
+mode = statistics.mode(weight)
+
+#measure of spread
+
+variance = statistics.variance(weight)
+std_deviation =statistics.stdev(weight)
+lowest = min(weight)
+highest = max(weight)
+
+print()
+print("=============================================================")
+print()
+print(f"Here's some weight data: {weight}")
+print()
+print("Descriptive statistics include measures of central tendancy:")
+print(f"   mean={mean:.2f}")
+print(f"   median={median:.2f}")
+print(f"   mode={mode:.2f}")
+print()
+print("Descriptive statistics include measures of spread:")
+print(f"   var={variance:.2f}")
+print(f"   stddev={std_deviation:.2f}")
+print()
+print()
+print("=============================================================")
+print()
+print("See the following for weight and rep data:")
+print()
+print(f"xtimes:{xreps}")
+print()
+print(f"yvalues:{ypounds}")
+print()
+print(
+    "These stats will show the correlation between the reps and weight",
+)
+print()
+print(f"   correlation between xreps and xreps = {xx_coor:.2f}")
+print(f"   correlation between xtimes and yvalues = { xy_coor:.2f}")
+print()
+
+
+#calculate slope/intercept
+
+slope, intercept = statistics.linear_regression(xreps, ypounds)
+futurex = 14
+future_y = round(slope * futurex + intercept)
+
+print()
+print()
+print("Now we will see some of our data combined.")
+print()
+print(f"x (reps):{xreps}")
+print()
+print(f"y (pounds):{ypounds}")
+print()
+print("We will calculate for the best fit straight line: ")
+print()
+print(f"   slope = {slope:.2f}")
+print(f"   intercept = { intercept:.2f}")
+print()
+print("Now we will predict our future weight using the best fit line: ")
+print()
+print(f"   At {futurex:d}, reps,")
+print(f"   your predicted weight will be { future_y:d}.")
+print()
+print()
+
