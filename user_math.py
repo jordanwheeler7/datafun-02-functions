@@ -10,6 +10,21 @@ import math
 import statistics
 import webbrowser
 
+def get_area_of_lot(length, width):
+    """
+    Return area of a lot given the length and width of the lot.
+    Could this fail?
+    """
+
+    # Use a try / except / finally block when something
+    # could go wrong
+    try:
+        area = length * width
+        return area
+    except Exception as ex:
+        print(f"Error: {ex}")
+        return None
+
 # Welcome the user and gather their inputs
 print()
 print()
