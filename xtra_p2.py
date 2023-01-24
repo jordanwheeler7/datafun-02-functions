@@ -26,11 +26,12 @@ Optional bonus. See course site for details.
 """
 
 import doctest
+import math
 
 # define some existing functions
 def add_two(first, second):
     """Return the sum of any two arguments."""
-    sum = first   # fix this line
+    sum = first + second   # fix this line
     return sum
 
 
@@ -38,7 +39,7 @@ def add_triangle_list(list_triangle):
     """Return the sum of three numbers in a list."""
     sum = 0
     for value in list_triangle:
-        sum = sum + 0  # fix this line to add the value instead of 0
+        sum = sum + value  # fix this line to add the value instead of 0
     return sum
 
 
@@ -46,7 +47,7 @@ def add_any(*args):
     """Return the sum of numbers, using built-in *args."""
     sum = 0
     for x in args:
-        sum += 1  # fix this line to add x instead of 1
+        sum += x  # fix this line to add x instead of 1
     return sum
 
 
@@ -54,7 +55,7 @@ def add_any_with_keywords(**kwargs):
     """Return the sum of numbers, using built-in keyword args, **kwargs."""
     sum = 0
     for value in kwargs.values():  # use values() - name doesn't matter
-        sum += value  # Use the popular and concise version of sum = sum + x
+        sum += + value  # Use the popular and concise version of sum = sum + x
     return sum
 
 
@@ -63,9 +64,10 @@ def add_any_with_keywords(**kwargs):
 # The name of the function is provided in the docstring above
 
 
-
-
-
+def convert_ctof(celsius):
+    "Return a value in farenheit from celsius"
+    temp_f = celsius * 1.8 + 32
+    return temp_f
 
 
 
